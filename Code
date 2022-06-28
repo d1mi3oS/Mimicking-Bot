@@ -4,7 +4,7 @@ bot = telebot.TeleBot('5454037183:AAFN0qVGlHpioqgrl-42kYHIa3UqMIgd56k')
 
 @bot.message_handler(commands=["start"])
 def start(m, res=False):
-    bot.send_message(m.chat.id, 'Я тут. Напиши мне что-нибудь')
+    bot.send_message(m.chat.id, 'Я тут. Готов дублировать ваши сообщения')
 
 @bot.message_handler(content_types=["text"])
 def handle_text(message):
