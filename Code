@@ -3,11 +3,11 @@ import telebot
 bot = telebot.TeleBot('5454037183:AAFN0qVGlHpioqgrl-42kYHIa3UqMIgd56k')
 
 @bot.message_handler(commands=["start"])
-def start(m, res=False):
+def start(m, res=True):
     bot.send_message(m.chat.id, 'Я тут. Готов дублировать ваши сообщения')
 
 @bot.message_handler(content_types=["text"])
 def handle_text(message):
-    bot.send_message(message.chat.id, 'Дублирую ваше сообщение: ' + message.text)
+    bot.send_message(message.chat.id, '' + message.text)
 
 bot.polling(none_stop=True, interval=0)
